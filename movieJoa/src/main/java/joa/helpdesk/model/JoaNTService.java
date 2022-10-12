@@ -8,7 +8,7 @@ public interface JoaNTService {
 	
 	public int deleteNotice(int idx);
 	
-	public int rewriteNotice(int idx);
+	public int rewriteNotice(JoaNoticeDTO dto);
 	
 	public List<JoaNoticeDTO> NoticeList();
 	

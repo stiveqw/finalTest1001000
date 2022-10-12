@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+.helpDesk_main{
+	position: relative;
+	width: 1100px;
+   	margin: 0px auto;
+  	height:auto;
+   	overflow:auto;
+}
+
+
+.helpMenu{
+	position: absolute;
+	top:0px;
+	float: left;
+	left: 70px;
+	border: 0px; 
+	padding: 0px;
+	overflow: auto;
+	background-color :#EEEEEE;
+	align:left;
+	
+}
+
+.manyHelpMain{
+	
+	align:center;
+	width: 700px;
+	height:auto;
+	margin: 0px auto;
+	overflow: auto;
+}

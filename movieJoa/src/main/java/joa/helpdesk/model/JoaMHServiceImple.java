@@ -24,8 +24,8 @@ public class JoaMHServiceImple implements JoaMHService {
 	}
 
 	@Override
-	public int rewriteManyHelp(int idx) {
-		int result = JoaManyHelpDao.rewriteManyHelp(idx);
+	public int rewriteManyHelp(JoaManyHelpDTO dto) {
+		int result = JoaManyHelpDao.rewriteManyHelp(dto);
 		return result;
 	}
 

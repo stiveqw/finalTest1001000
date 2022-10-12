@@ -32,8 +32,8 @@ public class JoaNoticeDAOImple implements JoaNoticeDAO {
 	}
 
 	@Override
-	public int rewriteNotice(int idx) {
-		int result = sqlMap.insert("NoticeUpdate",idx);
+	public int rewriteNotice(JoaNoticeDTO dto) {
+		int result = sqlMap.insert("NoticeUpdate",dto);
 		return result;
 	}
 

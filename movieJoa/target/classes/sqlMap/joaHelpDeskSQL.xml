@@ -5,8 +5,8 @@
   <mapper namespace="joa.helpdesk">
   	<insert id="QuestionInsert" parameterType="joa.helpdesk.model.JoaHelpQuestionDTO">
 			insert into
-			helpquestion
-			values(helpquestion_idx.nextval,
+			joa_helpquestion
+			values(joa_helpquestion_hqt_idx.nextval,
 			#{type},
 			#{region},
 			#{cinema},
@@ -28,14 +28,14 @@
 			select
 			*
 			from
-			helpquestion order by idx
+			joa_helpquestion order by hqt_idx
 	</select>
 	
 	<select id="SerchQuestionList" resultType="joa.helpdesk.model.JoaHelpQuestionDTO">
 			select
 			*
 			from
-			helpquestion order by idx
+			joa_helpquestion order by hqt_idx
 			where type=#{type}
 			and
 			region=#{region}
@@ -47,40 +47,40 @@
 			select
 			*
 			from
-			helpquestion
-			where idx=#{idx}
+			joa_helpquestion
+			where hqt_idx=#{idx}
 	</select>
 	
 	<update id="QuestionAnswer" parameterType="joa.helpdesk.model.JoaHelpQuestionDTO">
 	
 		update
-		helpquestion
+		joa_helpquestion
 		set 
 		state=#{state},
 		answerwrite=#{answerwrite},
 		answercontent=#{answercontent},
 		answerrank=#{answerrank},
 		answerdate=sysdate
-
+		where hqt_idx=#{idx}
 	</update>
 	
 	<update id="QuestionReAnswer" parameterType="joa.helpdesk.model.JoaHelpQuestionDTO">
 	
 		update
-		helpquestion
+		joa_helpquestion
 		set 
 		state=#{state},
 		answerwrite=#{answerwrite},
 		answercontent=#{answercontent},
 		answerrank=#{answerrank},
 		reanswerdate=sysdate
-		
+		where hqt_idx=#{idx}
 	</update>
 	
 	<insert id="ManyHelpInsert" parameterType="joa.helpdesk.model.JoaManyHelpDTO">
 			insert into
-			lookingforquestion
-			values(lookingforquestion_idx.nextval,
+			joa_lookingforquestion
+			values(joa_lookingforquestion_idx.nextval,
 			#{type},
 			#{subject},
 			#{content},
@@ -92,20 +92,20 @@
 	<delete id="ManyHelpDelete" parameterType="joa.helpdesk.model.JoaManyHelpDTO">
 		delete
 		from
-		lookingforquestion
-		where idx=#{idx}
+		joa_lookingforquestion
+		where lfq_idx=#{idx}
 	</delete>
 	
 	<update id="ManyHelpUpdate" parameterType="joa.helpdesk.model.JoaManyHelpDTO">
 		update
-		lookingforquestion
+		joa_lookingforquestion
 		set
 		type=#{type},
 		subject=#{subject},
 		content=#{content},
 		writedate=#{writedate},
 		rewritedate=sysdate
-		
+		where lfq_idx=#{idx}
 	</update>
 	
 	<select id="ManyHelpList" resultType="joa.helpdesk.model.JoaManyHelpDTO">
@@ -113,7 +113,7 @@
 		select
 			*
 		from
-		lookingforquestion order by idx
+		joa_lookingforquestion order by lfq_idx
 	
 	</select>
 	
@@ -122,7 +122,7 @@
 		select
 			*
 		from
-		lookingforquestion order by idx
+		joa_lookingforquestion order by lfq_idx
 		where type=#{type}
 	</select>
 	
@@ -130,14 +130,14 @@
 			select
 			*
 			from
-			lookingforquestion
-			where idx=#{idx}
+			joa_lookingforquestion
+			where lfq_idx=#{idx}
 	</select>
 	
 	<insert id="NoticeInsert" parameterType="joa.helpdesk.model.JoaNoticeDTO">
 			insert into
-			notice
-			values(lookingforquestion_idx.nextval,
+			joa_notice
+			values(joa_notice_idx.nextval,
 			#{type},
 			#{subject},
 			#{content},
@@ -150,13 +150,13 @@
 	<delete id="NoticeDelete" parameterType="joa.helpdesk.model.JoaNoticeDTO">
 		delete
 		from
-		notice
-		where idx=#{idx}
+		joa_notice
+		where ntc_idx=#{idx}
 	</delete>
 	
 	<update id="NoticeUpdate" parameterType="joa.helpdesk.model.JoaNoticeDTO">
 		update
-		notice
+		joa_notice
 		set
 		type=#{type},
 		subject=#{subject},
@@ -164,7 +164,7 @@
 		file=#{file},
 		writedate=#{writedate},
 		rewritedate=sysdate
-		
+		where ntc_idx=#{idx}
 	</update>
 	
 	<select id="NoticeList" resultType="joa.helpdesk.model.JoaNoticeDTO">
@@ -172,7 +172,7 @@
 		select
 			*
 		from
-		notice order by idx
+		joa_notice order ntc_idx
 	
 	</select>
 	
@@ -181,7 +181,7 @@
 		select
 			*
 		from
-		notice order by idx
+		joa_notice order by ntc_idx
 		where type=#{type}
 	</select>
 	
@@ -189,8 +189,8 @@
 			select
 			*
 			from
-			notice
-			where idx=#{idx}
+			joa_notice
+			where ntc_idx=#{idx}
 	</select>
 	
 	

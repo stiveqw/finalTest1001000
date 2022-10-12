@@ -13,38 +13,38 @@ public class JoaNTServiceImple implements JoaNTService {
 
 	@Override
 	public int addNotice(JoaNoticeDTO dto) {
-		// TODO Auto-generated method stub
-		return 0;
+		int result = JoaNoticeDao.addNotice(dto);
+		return result;
 	}
 
 	@Override
 	public int deleteNotice(int idx) {
-		// TODO Auto-generated method stub
-		return 0;
+		int result = JoaNoticeDao.deleteNotice(idx);
+		return result;
 	}
 
 	@Override
-	public int rewriteNotice(int idx) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int rewriteNotice(JoaNoticeDTO dto) {
+		int result = JoaNoticeDao.rewriteNotice(dto);
+		return result;
 	}
 
 	@Override
 	public List<JoaNoticeDTO> NoticeList() {
-		// TODO Auto-generated method stub
-		return null;
+		List<JoaNoticeDTO> list = JoaNoticeDao.NoticeList();
+		return list;
 	}
 
 	@Override
 	public List<JoaNoticeDTO> serchNoticeList(String type) {
-		// TODO Auto-generated method stub
-		return null;
+		List<JoaNoticeDTO> list = JoaNoticeDao.serchNoticeList(type);
+		return list;
 	}
 
 	@Override
 	public JoaNoticeDTO noticeBorder(int idx) {
-		// TODO Auto-generated method stub
-		return null;
+		JoaNoticeDTO dto = JoaNoticeDao.noticeBorder(idx);
+		return dto;
 	}
 
 }

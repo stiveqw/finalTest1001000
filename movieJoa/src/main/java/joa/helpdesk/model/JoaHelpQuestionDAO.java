@@ -17,4 +17,6 @@ public interface JoaHelpQuestionDAO {
 	public int answerQuestion(JoaHelpQuestionDTO dto);
 	
 	public int reanswerQuestion(JoaHelpQuestionDTO dto);
+	
+	
 }

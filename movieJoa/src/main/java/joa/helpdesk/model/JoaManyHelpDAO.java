@@ -8,7 +8,7 @@ public interface JoaManyHelpDAO {
 	
 	public int deleteManyHelp(int idx);
 	
-	public int rewriteManyHelp(int idx);
+	public int rewriteManyHelp(JoaManyHelpDTO dto);
 	
 	public List<JoaManyHelpDTO> ManyHelpList();
 	

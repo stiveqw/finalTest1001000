@@ -28,8 +28,8 @@ public class JoaManyHelpDAOImple implements JoaManyHelpDAO {
 	}
 
 	@Override
-	public int rewriteManyHelp(int idx) {
-		int result = sqlMap.insert("ManyHelpUpdate",idx);
+	public int rewriteManyHelp(JoaManyHelpDTO dto) {
+		int result = sqlMap.insert("ManyHelpUpdate",dto);
 		return 0;
 	}
 
