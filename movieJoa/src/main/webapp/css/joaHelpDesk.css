@@ -9,12 +9,7 @@
 	color: white;
 	cursor:pointer;
 }
-.a{
-	display: block;
-	height:40px;
-	width: 90px;
-	background-color: #EEEEEE;
-}
+
 .helpDesk_main{
 	position: relative;
 	width: 1100px;
@@ -59,7 +54,10 @@
 	font-size:12px;
 	color:gray;
 }
+
 .menuli{
+	padding: 1px;
+	line-height: 40px;
     float:left;
     text-align:center;
 }
