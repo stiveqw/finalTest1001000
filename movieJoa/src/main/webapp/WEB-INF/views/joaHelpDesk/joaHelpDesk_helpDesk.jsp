@@ -14,7 +14,13 @@
 <br>
 <section>
 <div class="helpDesk_main">
-<div align="center">f</div>
+<div class="HelpMain">
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+</div>
 	<ul class="helpMenu">
 		<li><a href="helpDesk.do">고객센터</a></li>
 		<li><a href="manyHelp.do">자주찾는 질문</a></li>

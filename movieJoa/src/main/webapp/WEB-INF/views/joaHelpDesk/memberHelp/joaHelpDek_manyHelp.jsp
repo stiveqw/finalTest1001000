@@ -19,26 +19,31 @@
 	<h4 class="manyHelpSubject">자주찾는 질문</h4>
 	<div class="manyHelpIntroduce">회원님들께서 가장 자주하시는 질문을 모았습니다.<br>
 	궁금하신 내용에 대해 검색해보세요</div>
-	<div class="manyHelpSerch"><input type="text" name="type"><input type="button" value="검색하기"><div>추천 검색어 | 현금영수증 | 관람권 | 결제 | 예매</div></div>
-	<div class="manyHelpSerchBarFeild">
-		<ul class="manyHelpSerchBar">
-			<li>전체</li>
-			<li>예매/매표</li>
-			<li>쿠폰/결제수단</li>
-			<li>포인트/쿠폰</li>
-			<li>할인혜택</li>
-			<li>스토어샵</li>
-			<li>홈페이지</li>
+	<br>
+	<div class="manyHelpSerch"><input class="serchbar" type="text" name="type">&nbsp;<input class="button" type="button" value="검색하기">&nbsp;&nbsp;추천 검색어 | 현금영수증 | 관람권 | 결제 | 예매</div>
+	<br>
+	<div class="box">
+		<ul class="manyHelpSerchBarFeild">
+			<li class="menuli"><a class="a" href="helpDesk.do">전체</a></li>
+			<li class="menuli"><a class="a" href="#">예매/매표</a></li>
+			<li class="menuli"><a class="a" href="#">결제수단</a></li>
+			<li class="menuli"><a class="a" href="#">포인트/쿠폰</a></li>
+			<li class="menuli"><a class="a" href="#">할인혜택</a></li>
+			<li class="menuli"><a class="a" href="#">스토어샵</a></li>
+			<li class="menuli"><a class="a" href="#">홈페이지</a></li>
 		</ul>
 	</div>
 	<br>
+	
+</div>
 	<div class="manyHelpContent">
-		<table>
+	<div>
+		<table class="manyHelpBorder">
 			<thead>
 				<tr>
-					<th>구분</th>
+					<th class="manyHelpBordertype">구분</th>
 					<th>제목</th>
-					<th>조회수</th>
+					<th class="manyHelpBorderReadnum">조회수</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -49,13 +54,13 @@
 			</c:if>
 				<c:forEach var="list" items="${list }">
 			<tr>
-				<td>${list.idx }</td><td>${list.subject }</td><td>${list.readnum }</td>
+				<td class="manyHelpBordertype">${list.idx }</td><td>${list.subject }</td><td class="manyHelpBorderReadnum">${list.readnum }</td>
 			</tr>
 		</c:forEach>
 			</tbody>
 		</table>
 	</div>
-</div>
+	</div>
 	<ul class="helpMenu">
 		<li><a href="helpDesk.do">고객센터</a></li>
 		<li><a href="manyHelp.do">자주찾는 질문</a></li>
